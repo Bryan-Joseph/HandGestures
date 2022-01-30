@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>Hand Gesture App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <center>
+
+            <h3 class="btn btn-danger mt-5 font-weight-bolder font_22 borderR_30 shadow_10">
+                Hand Gesture App <br>
+                <span>🤟</span>
+                <span>👍</span>
+                <span>👎</span>
+                <span>👌</span>
+                <span>✌</span>
+                <span>👇</span>
+                <span>👊</span>
+            </h3>
+
+            <br><br>
+
+            <p class="bg-white p-3 font_22 borderR_20 shadow_10">
+                <b class="text-dark">Take a selfie of a gesture to know its meaning</b>
+                <br>
+                <b style="color: black">It is trained to regocnise:-</b>
+                <br>
+                <b style="color: black">🤟|👍|👎|👌|✌</b>
+                <br>
+            </p>
+            <div class="row mt-5">
+                <div class="col-md-4 col-sm-12">
+                    <label class="bg-white text-dark p-2 font-weight-bold borderR_10 shadow_5">Webcam - </label>
+                    <div id="camera" class="shadow_5"></div>
+                    <br>
+                    <button class="btn btn-warning shadow_5" onclick="takeSnap()" id="takeSnap">Take Snapshot</button>
+                    <br><br>
+    
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <br><br>
+
+                    <label class="bg-white text-dark p-2 font-weight-bold borderR_10 shadow_5">Prediction -</label>
+                    <p class="gesture_name" id="result_gesture_name"></p>
+                    <p class="gesture" id="result_gesture"></p>
+
+                    <label class="bg-white text-dark p-2 font-weight-bold borderR_10 shadow_5">Confidence -</label>
+                    <p class="gesture_name" id="result_gesture_confidence"></p>
+
+                </div>
+    
+                <div class="col-md-4 col-sm-12">
+                    <label class="bg-white text-dark p-2 font-weight-bold borderR_10 shadow_5">Snapshot - </label>
+                    <div id="result" class="shadow_10"></div>
+                    <br>
+                    <button class="btn btn-success shadow_5" onclick="check()" id="check">Predict Gesture</button>
+                    <br><br>
+    
+                </div>
+            </div>
+
+        </center>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

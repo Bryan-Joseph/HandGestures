@@ -1,0 +1,82 @@
+body
+{
+  color: white;
+  background: #c0d3ff;
+}
+span
+{
+  font-size: 30px;
+}
+#camera , #result
+{
+  
+  border-width: 20px;
+  border-style: ridge;
+  border-color: red;
+  width: 350px!important;
+  height: 300px!important;
+}
+
+#camera{
+    animation-name: borderChange;
+    animation-duration: 10s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+}
+
+#result{
+    animation-name: borderChange;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+}
+
+.gesture_name
+{
+  font-size: 40px;
+}
+.gesture
+{
+  font-size:48px;
+}
+
+@keyframes borderChange {
+    0%{border-color: red;}
+    14%{border-color: yellow;}
+    28%{border-color: greenyellow;}
+    42%{border-color: green;}
+    56%{border-color: cyan;}
+    70%{border-color: blue;}
+    84%{border-color: purple;}
+    100%{border-color: red;}
+}
+
+.font_22{
+    font-size:22px;
+}
+
+.borderR_30{
+    border-radius: 30px!important;
+}
+
+.borderR_20{
+    border-radius: 20px;
+}
+
+.borderR_10{
+    border-radius: 10px;
+}
+
+.shadow_10{
+    box-shadow: 10px 10px 10px black;
+}
+
+.shadow_5{
+    box-shadow: 5px 5px 5px black;
+}
+
+body{
+    background: linear-gradient(90deg,black, blue,black)
+}
+
