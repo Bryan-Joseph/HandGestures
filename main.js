@@ -25,6 +25,14 @@ function check() {
     classifier.classify(img, afterClassification);
 }
 
+function speak(gesture, confidence) {
+    synth = window.speechSynthesis;
+    speech = `The gesture is ${gesture} and the confidence is ${confidence}`;
+
+    utter = new SpeechSynthesisUtterance(speech);
+    synth.speak(utter);
+}
+
 function afterClassification(error, result) {
     if (error) {
         console.error(`An Error occured : ${error}`);
@@ -50,7 +58,11 @@ function afterClassification(error, result) {
         } else if (gesture == 'victory') {
             document.getElementById('result_gesture').innerHTML = '✌';
         }
+
+        speak(gesture,confidence);
     }
+
+
 
 }
 
